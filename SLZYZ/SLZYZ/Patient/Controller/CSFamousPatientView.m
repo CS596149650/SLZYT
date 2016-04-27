@@ -7,6 +7,7 @@
 //  名医汇
 
 #import "CSFamousPatientView.h"
+#import "CSPatientFamousViewController.h"
 
 
 
@@ -15,10 +16,22 @@
 @property (nonatomic, strong) UILabel  *topLabel;
 @property (nonatomic, strong) UIImageView  *moreImagr;
 @property (nonatomic, strong) UIView  *topView;
-@property (nonatomic, strong) UIView  *FamousPatientV;
+
+
+@property (nonatomic, strong) CSPatientFamousViewController   *patientFamous;
 
 @end
 @implementation CSFamousPatientView
+
+
+- (CSPatientFamousViewController *)patientFamous{
+    if (!_patientFamous) {
+        self.patientFamous = [[CSPatientFamousViewController alloc] init];
+   
+        
+    }
+    return _patientFamous;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
@@ -46,21 +59,30 @@
     
     UIImageView *moreImage  = [[UIImageView alloc] init];
     moreImage.backgroundColor = [UIColor orangeColor];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moreImgButton:)];
+    moreImage.userInteractionEnabled = YES;
+    [moreImage addGestureRecognizer:tap];
     [_topView addSubview:moreImage];
     _moreImagr = moreImage;
     
-    UIView *famousView = [[UIView alloc] init];
-    famousView.backgroundColor = [UIColor greenColor];
-    [self addSubview:famousView];
-    _FamousPatientV = famousView;
+    
+   
+    [self addSubview:self.patientFamous.view];
+
     
 }
 - (void)loadSubViewLoyout{
     _topView.frame = CGRectMake(0, 0, kScreenWidth, self.bounds.size.height / 5);
-    
     _topLabel.frame = CGRectMake(0, 0, kScreenWidth / 5, self.bounds.size.height / 5);
     _moreImagr.frame = CGRectMake(kScreenWidth - marginView - kScreenWidth / 5, 0, kScreenWidth / 5, self.bounds.size.height / 5);
-    _FamousPatientV.frame = CGRectMake(0, CGRectGetHeight(self.topLabel.frame) + marginView, kScreenWidth, self.bounds.size.height - self.topLabel.frame.size.height - marginView);
+   
+  
 }
 
+
+- (void)moreImgButton:(UITapGestureRecognizer *)tap{
+    NSLog(@"名医汇更多%@", self.moreImagr);
+   
+    
+}
 @end

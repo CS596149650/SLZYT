@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CSFamousPatientView : UIView
-
+@property (nonatomic, assign) long  height;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CSPatientHeathView.h"
+#import "CSPatientHeadthTVC.h"
 
 
 
@@ -16,9 +17,21 @@
 @property (nonatomic, strong) UIView  *topView;
 @property (nonatomic, strong) UIView  *FamousPatientV;
 
+@property (nonatomic, strong) CSPatientHeadthTVC  *patientTVC;
+
+
+
 @end
 @implementation CSPatientHeathView
 
+- (CSPatientHeadthTVC *)patientTVC{
+    if (!_patientTVC) {
+        self.patientTVC = [[CSPatientHeadthTVC alloc] init];
+      
+
+    }
+    return _patientTVC;
+}
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self loadSubView];
@@ -45,20 +58,29 @@
     
     UIImageView *moreImage  = [[UIImageView alloc] init];
     moreImage.backgroundColor = [UIColor orangeColor];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moreImgButton:)];
+    moreImage.userInteractionEnabled = YES;
+    [moreImage addGestureRecognizer:tap];
     [_topView addSubview:moreImage];
     _moreImagr = moreImage;
     
-    UIView *famousView = [[UIView alloc] init];
-    famousView.backgroundColor = [UIColor greenColor];
-    [self addSubview:famousView];
-    _FamousPatientV = famousView;
+    
+    
+    [self addSubview:self.patientTVC.view];
+
     
 }
 - (void)loadSubViewLoyout{
     _topView.frame = CGRectMake(0, 0, kScreenWidth, self.bounds.size.height / 8);
     _topLabel.frame = CGRectMake(0, 0, kScreenWidth / 4, self.bounds.size.height / 8);
-    _moreImagr.frame = CGRectMake(kScreenWidth - marginView - kScreenWidth / 6, 0, kScreenWidth / 5, self.bounds.size.height / 8);
-    _FamousPatientV.frame = CGRectMake(0, CGRectGetHeight(self.topLabel.frame) + marginView, kScreenWidth, self.bounds.size.height - self.topLabel.frame.size.height - marginView);
+   _moreImagr.frame = CGRectMake(kScreenWidth - marginView - kScreenWidth / 5, 0, kScreenWidth / 5, self.bounds.size.height / 5);
+
+      self.patientTVC.view.frame =  CGRectMake(0, CGRectGetHeight(self.topLabel.frame) + marginView, kScreenWidth, self.bounds.size.height - self.topLabel.frame.size.height - marginView);
 }
 
+
+- (void)moreImgButton:(UITapGestureRecognizer *)tap{
+    NSLog(@"健康咨询更多%@", self.moreImagr);
+    NSLog(@"健康咨询更多");
+}
 @end

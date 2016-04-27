@@ -93,6 +93,8 @@
     _imagView.frame = CGRectMake(CGRectGetMaxX(self.firstLabel.frame) + 4, (self.bounds.size.height - imgWidth) / 2, imgWidth, imgWidth);
     _imagView.layer.masksToBounds = YES;
     _imagView.layer.cornerRadius = self.imagView.bounds.size.width / 2;
+    
+    NSLog(@"%@", self.imagView);
 }
 
 - (void)loadtitlefirst:(NSString *)first second:(NSString *)second three:(NSString *)three four:(NSString *)four five:(NSString *)five{
