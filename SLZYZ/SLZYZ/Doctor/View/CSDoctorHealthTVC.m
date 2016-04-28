@@ -1,20 +1,19 @@
 //
-//  CSPatientHeadthTVC.m
+//  CSDoctorHealthTVC.m
 //  SLZYZ
 //
-//  Created by 1780933497@qq.com on 16/4/27.
+//  Created by 1780933497@qq.com on 16/4/28.
 //  Copyright © 2016年 MrCHEN. All rights reserved.
-//  健康咨询下面的tableView
+//
 
-#import "CSPatientHeadthTVC.h"
+#import "CSDoctorHealthTVC.h"
 #import "CSPatientHealthTableViewCell.h"
-
-@interface CSPatientHeadthTVC ()
+@interface CSDoctorHealthTVC ()
 
 @end
 
-@implementation CSPatientHeadthTVC
- static NSString *identifier = @"CSPatientHealthTableViewCell";
+@implementation CSDoctorHealthTVC
+static NSString *identifier = @"CSPatientHealthTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,14 +24,10 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
     
-   
+    
     [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -41,7 +36,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return 5;
 }
 
@@ -50,14 +45,18 @@
     CSPatientHealthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-  //  NSLog(@"健康咨询-----%@", cell);
+    //  NSLog(@"健康咨询-----%@", cell);
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return self.view.bounds.size.height / 2.5;
+    return self.view.bounds.size.height / 3.5;
 }
+
+
+
+
 
 
 @end

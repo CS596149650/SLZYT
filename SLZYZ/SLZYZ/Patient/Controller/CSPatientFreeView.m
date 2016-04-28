@@ -69,13 +69,13 @@
 
 
 - (void)freeAskDoctorAction:(UITapGestureRecognizer *)tap{
-    NSLog(@"freeAskDoctorAction");
+   // NSLog(@"freeAskDoctorAction");
 }
 - (void)hositoryAskDoctorAction:(UITapGestureRecognizer *)tap{
-    NSLog(@"hositoryAskDoctorAction");
+   // NSLog(@"hositoryAskDoctorAction");
 }
 
 - (void)OrderDoctorAction:(UITapGestureRecognizer *)tap{
-    NSLog(@"OrderDoctorAction");
+   // NSLog(@"OrderDoctorAction");
 }
 @end

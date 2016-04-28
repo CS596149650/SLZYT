@@ -155,7 +155,7 @@ static NSString *identifier = @"CSPatientHealthCell";
     
     CSPatientHealthCell  *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    NSLog(@"名医汇----%@", cell);
+   // NSLog(@"名医汇----%@", cell);
 //    if(!cell){
 //        cell = [[CSCollectionViewCell alloc] init];
 //    }

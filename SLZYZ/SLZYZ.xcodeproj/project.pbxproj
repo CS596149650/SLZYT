@@ -12,6 +12,10 @@
 		4E4FD0031CD05BC700DFE83C /* CSPatientHealthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4FD0021CD05BC700DFE83C /* CSPatientHealthTableViewCell.xib */; };
 		4E4FD00A1CD05C4200DFE83C /* CSPatientHealthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4FD0081CD05C4200DFE83C /* CSPatientHealthCell.m */; };
 		4E4FD00B1CD05C4200DFE83C /* CSPatientHealthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4FD0091CD05C4200DFE83C /* CSPatientHealthCell.xib */; };
+		4E8626681CD1A1C50035FEDC /* CSDoctorCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8626671CD1A1C50035FEDC /* CSDoctorCycleView.m */; };
+		4E86266E1CD1A7880035FEDC /* CSDoctorHealthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E86266D1CD1A7880035FEDC /* CSDoctorHealthView.m */; };
+		4E8626771CD1AE590035FEDC /* CSDoctorHealthTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8626761CD1AE590035FEDC /* CSDoctorHealthTVC.m */; };
+		4E86267A1CD1B3910035FEDC /* CSMiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8626791CD1B3910035FEDC /* CSMiddleViewController.m */; };
 		4EF128551CCF14AB004EA7A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF128541CCF14AB004EA7A7 /* main.m */; };
 		4EF128601CCF14AB004EA7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF1285F1CCF14AB004EA7A7 /* Assets.xcassets */; };
 		4EF128631CCF14AB004EA7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF128611CCF14AB004EA7A7 /* LaunchScreen.storyboard */; };
@@ -112,6 +116,14 @@
 		4E4FD0071CD05C4200DFE83C /* CSPatientHealthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPatientHealthCell.h; sourceTree = "<group>"; };
 		4E4FD0081CD05C4200DFE83C /* CSPatientHealthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPatientHealthCell.m; sourceTree = "<group>"; };
 		4E4FD0091CD05C4200DFE83C /* CSPatientHealthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSPatientHealthCell.xib; sourceTree = "<group>"; };
+		4E8626661CD1A1C50035FEDC /* CSDoctorCycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDoctorCycleView.h; sourceTree = "<group>"; };
+		4E8626671CD1A1C50035FEDC /* CSDoctorCycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDoctorCycleView.m; sourceTree = "<group>"; };
+		4E86266C1CD1A7880035FEDC /* CSDoctorHealthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDoctorHealthView.h; sourceTree = "<group>"; };
+		4E86266D1CD1A7880035FEDC /* CSDoctorHealthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDoctorHealthView.m; sourceTree = "<group>"; };
+		4E8626751CD1AE590035FEDC /* CSDoctorHealthTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDoctorHealthTVC.h; sourceTree = "<group>"; };
+		4E8626761CD1AE590035FEDC /* CSDoctorHealthTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDoctorHealthTVC.m; sourceTree = "<group>"; };
+		4E8626781CD1B3910035FEDC /* CSMiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMiddleViewController.h; sourceTree = "<group>"; };
+		4E8626791CD1B3910035FEDC /* CSMiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMiddleViewController.m; sourceTree = "<group>"; };
 		4EF128501CCF14AB004EA7A7 /* SLZYZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLZYZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF128541CCF14AB004EA7A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EF1285F1CCF14AB004EA7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -480,6 +492,12 @@
 				4EF128F31CCF490C004EA7A7 /* CSDoctorViewController.h */,
 				4EF128F41CCF490C004EA7A7 /* CSDoctorViewController.m */,
 				4EF1BFFB1CD0A5CE0097E22F /* Doctor.storyboard */,
+				4E8626781CD1B3910035FEDC /* CSMiddleViewController.h */,
+				4E8626791CD1B3910035FEDC /* CSMiddleViewController.m */,
+				4E8626661CD1A1C50035FEDC /* CSDoctorCycleView.h */,
+				4E8626671CD1A1C50035FEDC /* CSDoctorCycleView.m */,
+				4E86266C1CD1A7880035FEDC /* CSDoctorHealthView.h */,
+				4E86266D1CD1A7880035FEDC /* CSDoctorHealthView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -494,6 +512,8 @@
 		4EF128EB1CCF488B004EA7A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E8626751CD1AE590035FEDC /* CSDoctorHealthTVC.h */,
+				4E8626761CD1AE590035FEDC /* CSDoctorHealthTVC.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -794,9 +814,11 @@
 				4EF128F21CCF489B004EA7A7 /* CSPatientViewController.m in Sources */,
 				4EF1BFC21CD094350097E22F /* SDWebImageDownloader.m in Sources */,
 				4EF1BFE11CD0943F0097E22F /* SDCollectionViewCell.m in Sources */,
+				4E8626681CD1A1C50035FEDC /* CSDoctorCycleView.m in Sources */,
 				4EF1BFDE1CD0943F0097E22F /* TAAnimatedDotView.m in Sources */,
 				4EF129111CCF6C18004EA7A7 /* CSPatientHostoryCellView.m in Sources */,
 				4EF1BFC01CD094350097E22F /* SDWebImageCompat.m in Sources */,
+				4E8626771CD1AE590035FEDC /* CSDoctorHealthTVC.m in Sources */,
 				4EF128CD1CCF1894004EA7A7 /* CSMainViewController.m in Sources */,
 				4EF128C71CCF1736004EA7A7 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				4EF1BF9A1CD0731B0097E22F /* CSPatientFamousViewController.m in Sources */,
@@ -816,6 +838,7 @@
 				4E4FD0011CD05B9900DFE83C /* CSPatientHealthTableViewCell.m in Sources */,
 				4EF1290E1CCF6018004EA7A7 /* CSPatientFreeCellView.m in Sources */,
 				4EF128C61CCF1736004EA7A7 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
+				4E86266E1CD1A7880035FEDC /* CSDoctorHealthView.m in Sources */,
 				4EF128D51CCF1A35004EA7A7 /* AppDelegate.m in Sources */,
 				4EF1BFBE1CD094350097E22F /* NSData+ImageContentType.m in Sources */,
 				4EF128D11CCF189B004EA7A7 /* CSLeftViewController.m in Sources */,
@@ -827,6 +850,7 @@
 				4EF128FD1CCF4A0F004EA7A7 /* CSPatientCycleView.m in Sources */,
 				4EF128A91CCF1636004EA7A7 /* CSNewFeatureCell.m in Sources */,
 				4EF1BFE21CD0943F0097E22F /* SDCycleScrollView.m in Sources */,
+				4E86267A1CD1B3910035FEDC /* CSMiddleViewController.m in Sources */,
 				4EF1BFC51CD094350097E22F /* SDWebImagePrefetcher.m in Sources */,
 				4EF1BFBD1CD094350097E22F /* MKAnnotationView+WebCache.m in Sources */,
 				4EF1BFC71CD094350097E22F /* UIImage+GIF.m in Sources */,

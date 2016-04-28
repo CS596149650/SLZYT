@@ -73,14 +73,14 @@
 - (void)loadSubViewLoyout{
     _topView.frame = CGRectMake(0, 0, kScreenWidth, self.bounds.size.height / 8);
     _topLabel.frame = CGRectMake(0, 0, kScreenWidth / 4, self.bounds.size.height / 8);
-   _moreImagr.frame = CGRectMake(kScreenWidth - marginView - kScreenWidth / 5, 0, kScreenWidth / 5, self.bounds.size.height / 5);
+   _moreImagr.frame = CGRectMake(kScreenWidth - marginView - kScreenWidth / 5, 0, kScreenWidth / 5, self.bounds.size.height / 8);
 
-      self.patientTVC.view.frame =  CGRectMake(0, CGRectGetHeight(self.topLabel.frame) + marginView, kScreenWidth, self.bounds.size.height - self.topLabel.frame.size.height - marginView);
+      self.patientTVC.view.frame =  CGRectMake(0, CGRectGetHeight(self.topView.frame) + marginView, kScreenWidth, self.bounds.size.height - self.topLabel.frame.size.height - marginView);
 }
 
 
 - (void)moreImgButton:(UITapGestureRecognizer *)tap{
-    NSLog(@"健康咨询更多%@", self.moreImagr);
-    NSLog(@"健康咨询更多");
+   // NSLog(@"健康咨询更多%@", self.moreImagr);
+   // NSLog(@"健康咨询更多");
 }
 @end
