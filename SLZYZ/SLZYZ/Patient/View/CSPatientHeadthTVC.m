@@ -8,6 +8,7 @@
 
 #import "CSPatientHeadthTVC.h"
 #import "CSPatientHealthTableViewCell.h"
+#import "CSPatientHealthTool.h"
 
 @interface CSPatientHeadthTVC ()
 
@@ -27,6 +28,7 @@
     
    
     [self.tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,5 +61,12 @@
     return self.view.bounds.size.height / 2.5;
 }
 
+- (void)loadData{
+    [CSPatientHealthTool patientHealthToolSuccess:^(NSArray *patientHealthArray) {
+        NSLog(@"patientHealthArray%@", patientHealthArray);
+    } failture:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 @end

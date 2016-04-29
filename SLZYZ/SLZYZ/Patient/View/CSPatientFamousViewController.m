@@ -9,6 +9,7 @@
 #import "CSPatientFamousViewController.h"
 #import "CSPatientHealthCell.h"
 #import "CSFamousPatientView.h"
+#import "CSPatientFamousTool.h"
 
 
 
@@ -49,8 +50,6 @@ static NSString *identifier = @"CSPatientHealthCell";
         self.pageControl.numberOfPages = 5;
         
         
-        
-        
     }
     return _pageControl;
 }
@@ -68,7 +67,7 @@ static NSString *identifier = @"CSPatientHealthCell";
      self.view.frame = CGRectMake(0,  kScreenHeight / 5 / 5 + marginView, kScreenWidth,  kScreenHeight / 5 -  kScreenHeight / 5 / 5 - marginView);
      [self initView];
     
-    
+    [self loadData];
 }
 
 - (void)initView{
@@ -187,5 +186,12 @@ static NSString *identifier = @"CSPatientHealthCell";
     
 }
 
+- (void)loadData{
+    [CSPatientFamousTool patientFamousToolSuccess:^(NSArray *patientFamousArray) {
+        NSLog(@"patientFamousArray%@", patientFamousArray);
+    } failture:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 @end

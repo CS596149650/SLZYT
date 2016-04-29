@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSPatientCycleView : UIView
+@interface CSPatientCycleView : UIViewController
 
 @end
